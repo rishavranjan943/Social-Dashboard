@@ -35,7 +35,7 @@ const loginAdmin = async (req, res, next) => {
 
 const getAdminDashboard = async (req, res) => {
   try {
-    const users = await User.find().limit(10); 
+    const users = await User.find({}); 
     res.status(200).json({ users });
   } catch (error) {
     console.error('Error fetching admin dashboard data:', error);
